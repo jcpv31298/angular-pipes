@@ -1,0 +1,29 @@
+<p-panel [showHeader]="false" class="p-2">
+  <h1>Number Pipes</h1>
+
+  <p>
+    Angular Pipes - Includes in the CommonModule
+  </p>
+</p-panel>
+
+<div class="grid">
+
+  <div class="col-12 md:col-4">
+    <p-card header="Ventas Netas">
+      {{ totalSells + 1235 | number:'1.2-2' }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Ventas Brutas">
+      {{ totalSells | currency:'MXN':'symbol-narrow':'1.4-4' }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Ganancia Porcentual">
+      {{ percent | percent:'1.2-2' }}
+    </p-card>
+  </div>
+
+</div>
